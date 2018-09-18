@@ -168,9 +168,10 @@ var xmlFetch = function () {
 	cid = cid | 0;
 	loaded = 0;
 	$.ajax({
-		url: "//comment.bilibili.com/" + cid + ".xml",
+		url: "//www.biliplus.com/danmaku/" + cid + ".xml",
 		dataType: 'xml',
 		success: function (data) {
+			/*
 			$.ajax({
 				url: 'https://www.biliplus.com/danmaku/rolldate,' + cid,
 				//url: 'http://localhost/danmaku/rolldate,' + cid,
@@ -204,6 +205,7 @@ var xmlFetch = function () {
 					history_pickr.yearElements[0].classList.add('browser-default');
 				}
 			})
+			*/
 			xmlParse(data);
 			$("#progressBar").slideUp();
 		},
